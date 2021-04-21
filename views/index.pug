@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+
+  ul.messages
+    each val in messages
+      li.message
+        div.message__text #{val.text}
+        div.message__details #{val.user} - #{formatDistance(val.added, new Date())} ago
+
+  a(href="/new") Send a message

@@ -1,0 +1,76 @@
+:root {
+  --main-text-color: black;
+  --details-text-color: grey;
+  --border-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/* Index */
+.messages {
+  max-width: 25rem;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  min-width: 20rem;
+}
+
+.message:nth-child(odd) {
+  align-self: flex-start;
+}
+
+.message:nth-child(even) {
+  align-self: flex-end;
+}
+
+.message__text {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  grid-column: 1 / span 2;
+}
+
+.message__details {
+  font-size: 0.825rem;
+  color: var(--details-text-color);
+}
+
+.message:nth-child(odd) .message__details {
+  align-self: flex-start;
+}
+
+.message:nth-child(even) .message__details {
+  align-self: flex-end;
+}
+
+/* New */
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+}
+
+.form__input {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form__button {
+  align-self: flex-end;
+  padding: 0.25rem 1rem;
+}

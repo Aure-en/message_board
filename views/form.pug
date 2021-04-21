@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+
+  form.form(action='/new', method='POST')
+
+    label(
+      for="user"
+    )
+      input.form__input(
+        type="user"
+        name="user"
+        id="user"
+        placeholder="Name"
+      )
+
+    label(
+      for="text"
+    )
+      input.form__input(
+        type="text"
+        name="text"
+        id="text"
+        placeholder="Message"
+      )
+
+    button.form__button(
+      type="submit"
+    ) Send
+
+    a(href="/") See Messages
